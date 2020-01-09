@@ -1,0 +1,18 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>listall</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+<ion-grid>
+  <ion-row>
+    <ion-card *ngFor="let data of fullData">
+      <ion-item>
+        <img src="{{data?.image}}">
+      </ion-item>
+      <ion-card-content style="text-align: center;">{{data?.text}}</ion-card-content>
+    </ion-card>
+  </ion-row>
+</ion-grid>
+</ion-content>

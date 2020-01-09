@@ -1,0 +1,46 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      Dashboard
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <ion-grid>
+      <ion-row>
+         <ion-slides  autoplay="200" loop="true" speed="3000" [options]="mySlideOptions">
+            <ion-slide *ngFor="let slide of images; let i = index">
+              <img style="width: 100%;height: 100%;"src="{{slide.image}}">
+            </ion-slide>
+      
+          </ion-slides>
+          </ion-row>
+          <ion-card *ngFor="let data of vegitables">
+            <ion-item>
+              <img src="{{data.image}}">
+            </ion-item>
+            <ion-card-content style="text-align: center;">{{data.text}}</ion-card-content>
+            <ion-button (click)="addToCart(data)">Add to cart</ion-button>
+          </ion-card>
+          <!-- <ion-card>
+            <ion-item>
+              <img src="assets/images/img8.jpg">
+            </ion-item>
+            <ion-card-content style="text-align: center;">green</ion-card-content>
+          </ion-card>
+          <ion-card>
+            <ion-item>
+              <img src="assets/images/img9.jpg">
+            </ion-item>
+            <ion-card-content style="text-align: center;">Tomato</ion-card-content>
+          </ion-card> -->
+         </ion-grid>
+</ion-content>
+<ion-footer>
+  <ion-toolbar>
+    <ion-title>
+      
+    </ion-title>
+  </ion-toolbar>
+</ion-footer>
